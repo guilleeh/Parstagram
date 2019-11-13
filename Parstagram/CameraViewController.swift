@@ -8,11 +8,13 @@
 
 import UIKit
 import AlamofireImage
+import Parse
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var commentField: UITextField!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +23,31 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
 
     @IBAction func onSubmit(_ sender: Any) {
+        let post = PFObject(className: "Posts")
+        self.loadingIndicator.startAnimating()
         
+        post["caption"] = commentField.text!
+        post["author"] = PFUser.current()!
+        
+        let imageData = imageView.image!.pngData() //reduced image
+        let file = PFFileObject(data: imageData!) //binary object
+        
+        post["image"] = file
+        post.saveInBackground { (success, error) in
+            if success {
+                print("Saved")
+                self.loadingIndicator.stopAnimating()
+                self.dismiss(animated: true, completion: nil)
+            } else {
+                print("There was an error: \(error!)")
+                self.loadingIndicator.stopAnimating()
+                let alertController = UIAlertController(title: "Post Error", message: "\(error!)", preferredStyle: .alert)
+
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+
+                self.present(alertController, animated: true, completion: nil)
+            }
+        }
     }
     
     @IBAction func onCamera(_ sender: Any) {
