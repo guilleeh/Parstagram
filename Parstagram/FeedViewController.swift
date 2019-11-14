@@ -9,6 +9,7 @@
 import UIKit
 import Parse
 import AlamofireImage
+import Alamofire
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -22,6 +23,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         tableView.delegate = self
         tableView.dataSource = self
+        DataRequest.addAcceptableImageContentTypes(["application/octet-stream"])
+
         // Do any additional setup after loading the view.
     }
     
@@ -38,7 +41,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.posts = posts!
                 self.tableView.reloadData()
             } else {
-                
+                print(error!)
             }
         }
     }
@@ -64,7 +67,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let urlString = imageFile.url!
         
         let url = URL(string: urlString)!
-        print(url)
         
         cell.photoView.af_setImage(withURL: url)
         

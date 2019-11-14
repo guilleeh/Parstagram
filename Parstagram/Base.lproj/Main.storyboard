@@ -105,11 +105,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="443"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tvz-xc-sFt">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="342"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tvz-xc-sFt">
+                                                    <rect key="frame" x="6" y="11" width="400" height="331"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="414" id="AnP-el-jZN"/>
-                                                        <constraint firstAttribute="height" constant="342" id="fOR-AN-uPF"/>
+                                                        <constraint firstAttribute="width" constant="400" id="AnP-el-jZN"/>
+                                                        <constraint firstAttribute="height" constant="331" id="fOR-AN-uPF"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guillermo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJ6-Ec-u53">
@@ -137,9 +137,9 @@
                                                 <constraint firstAttribute="trailing" secondItem="ZM1-mJ-pnF" secondAttribute="trailing" constant="12" id="Nwj-4j-3N1"/>
                                                 <constraint firstItem="ZM1-mJ-pnF" firstAttribute="leading" secondItem="ZGR-oD-KVh" secondAttribute="leading" constant="6" id="PER-2n-3KE"/>
                                                 <constraint firstItem="TJ6-Ec-u53" firstAttribute="leading" secondItem="ZGR-oD-KVh" secondAttribute="leading" constant="6" id="bpC-8p-iVr"/>
-                                                <constraint firstItem="tvz-xc-sFt" firstAttribute="leading" secondItem="ZGR-oD-KVh" secondAttribute="leading" id="dVG-BV-xhj"/>
+                                                <constraint firstItem="tvz-xc-sFt" firstAttribute="leading" secondItem="ZGR-oD-KVh" secondAttribute="leading" constant="6" id="dVG-BV-xhj"/>
                                                 <constraint firstAttribute="bottom" secondItem="ZM1-mJ-pnF" secondAttribute="bottom" constant="11" id="eeb-x9-PRt"/>
-                                                <constraint firstItem="tvz-xc-sFt" firstAttribute="top" secondItem="ZGR-oD-KVh" secondAttribute="top" id="rbd-lm-PBa"/>
+                                                <constraint firstItem="tvz-xc-sFt" firstAttribute="top" secondItem="ZGR-oD-KVh" secondAttribute="top" constant="11" id="rbd-lm-PBa"/>
                                                 <constraint firstItem="ZM1-mJ-pnF" firstAttribute="top" secondItem="TJ6-Ec-u53" secondAttribute="bottom" constant="8" id="rcz-2M-kfk"/>
                                                 <constraint firstAttribute="trailing" secondItem="TJ6-Ec-u53" secondAttribute="trailing" constant="12" id="xUg-WH-Yw4"/>
                                             </constraints>
