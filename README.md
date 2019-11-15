@@ -23,4 +23,4 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://media1.tenor.com/images/491f16ddd056ea5fb95b42575f1d5ba5/tenor.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./parstagram.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
