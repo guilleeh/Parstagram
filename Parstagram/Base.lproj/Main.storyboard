@@ -159,7 +159,7 @@
                     <navigationItem key="navigationItem" id="ogj-hY-PMg">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="insta_camera_btn" id="k9w-fu-JqI">
                             <connections>
-                                <segue destination="lxh-o0-8ea" kind="presentation" id="8lq-Rc-RPL"/>
+                                <segue destination="lxh-o0-8ea" kind="presentation" identifier="createPostSegue" id="8lq-Rc-RPL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

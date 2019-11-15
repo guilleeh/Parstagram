@@ -37,7 +37,9 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             if success {
                 print("Saved")
                 self.loadingIndicator.stopAnimating()
-                self.dismiss(animated: true, completion: nil)
+                self.dismiss(animated: true) {
+                    print("I HAVE JUST DISMISSED THIS SEGUE")
+                }
             } else {
                 print("There was an error: \(error!)")
                 self.loadingIndicator.stopAnimating()
