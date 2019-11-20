@@ -118,7 +118,7 @@
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="396" id="Lig-P3-e90"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="396" id="wRh-ET-xxY"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -148,6 +148,40 @@
                                             <outlet property="captionLabel" destination="ZM1-mJ-pnF" id="7Sx-HP-u8V"/>
                                             <outlet property="photoView" destination="tvz-xc-sFt" id="dDz-Yr-Vk3"/>
                                             <outlet property="usernameLabel" destination="TJ6-Ec-u53" id="HFU-Ju-7Et"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" id="tw2-9D-xIM" customClass="CommentCell" customModule="Parstagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="471" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tw2-9D-xIM" id="py4-nF-0ip">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vv5-SJ-CKv">
+                                                    <rect key="frame" x="15.999999999999996" y="8" width="47.666666666666657" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This is a comment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25U-Uc-JuH">
+                                                    <rect key="frame" x="72" y="8" width="334" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="25U-Uc-JuH" firstAttribute="top" secondItem="py4-nF-0ip" secondAttribute="top" constant="8" id="7gL-9N-3EJ"/>
+                                                <constraint firstItem="25U-Uc-JuH" firstAttribute="leading" secondItem="vv5-SJ-CKv" secondAttribute="trailing" constant="8" id="GuS-Vz-gjp"/>
+                                                <constraint firstItem="vv5-SJ-CKv" firstAttribute="leading" secondItem="py4-nF-0ip" secondAttribute="leading" constant="16" id="UD9-ro-Jej"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="25U-Uc-JuH" secondAttribute="bottom" constant="8" id="Ulp-zH-GG5"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vv5-SJ-CKv" secondAttribute="bottom" constant="8" id="fJO-li-3cR"/>
+                                                <constraint firstItem="vv5-SJ-CKv" firstAttribute="top" secondItem="py4-nF-0ip" secondAttribute="top" constant="8" id="gM8-ce-wLs"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentLabel" destination="25U-Uc-JuH" id="xhk-64-Tlp"/>
+                                            <outlet property="nameLabel" destination="vv5-SJ-CKv" id="DAq-Vk-kcV"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
